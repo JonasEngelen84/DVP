@@ -5,8 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DVP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
         
+        Title="DVP"
+        Height="600"
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="IndianRed"
+        Icon="/DVP Icon.png">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button
+            Width="20"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="5,2.5,1,2.5">
+            <StackPanel>
+                <Image Source="/Filter.png" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button
+            Width="20"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="26,2.5,1,2.5">
+            <StackPanel>
+                <Image Source="/Bearbeiten.png" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button
+            Width="20"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="47,2.5,1,2.5">
+            <StackPanel>
+                <Image Source="/Rückgängig.png" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button
+            Width="20"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="68,2.5,1,2.5">
+            <StackPanel>
+                <Image Source="/Filter.png" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button
+            Width="20"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="89,2.5,1,2.5">
+            <StackPanel>
+                <Image Source="/Filter.png" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button
+            Width="20"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="110,2.5,1,2.5">
+            <StackPanel>
+                <Image Source="/Filter.png" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <DataGrid x:Name="ResultIssue"
+                  Margin="5,0,5,5"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  CanUserResizeRows="False"
+                  CanUserDeleteRows="False"
+                  BorderThickness="1" >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Saison"  />
+                <DataGridTextColumn Header="Kleidung"  />
+                <DataGridTextColumn Header="Größe"  />
+                <DataGridTextColumn Header="Menge" />
+                <DataGridTextColumn Header="Preis" />
+                <DataGridTextColumn Header="Kommentar"  />
+            </DataGrid.Columns>
+
+        </DataGrid>
     </Grid>
 </Window>
