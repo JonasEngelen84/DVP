@@ -58,7 +58,7 @@
             HorizontalAlignment="Left"
             Margin="68,2.5,1,2.5">
             <StackPanel>
-                <Image Source="/Filter.png" />
+                <Image Source="/Speichern.png" />
                 <TextBlock>Disconnect from Server</TextBlock>
             </StackPanel>
         </Button>
@@ -69,7 +69,7 @@
             HorizontalAlignment="Left"
             Margin="89,2.5,1,2.5">
             <StackPanel>
-                <Image Source="/Filter.png" />
+                <Image Source="/Drucken.png" />
                 <TextBlock>Disconnect from Server</TextBlock>
             </StackPanel>
         </Button>
@@ -80,7 +80,7 @@
             HorizontalAlignment="Left"
             Margin="110,2.5,1,2.5">
             <StackPanel>
-                <Image Source="/Filter.png" />
+                <Image Source="/Kontakt.png" />
                 <TextBlock>Disconnect from Server</TextBlock>
             </StackPanel>
         </Button>

@@ -107,5 +107,14 @@
   <ItemGroup>
     <Resource Include="Rückgängig.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Speichern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Drucken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kontakt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
