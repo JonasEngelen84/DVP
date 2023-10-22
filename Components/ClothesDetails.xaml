@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="DVP.Components.ClothesDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DVP.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DataGrid x:Name="ClothesDetailsDataGrid"
+                  Grid.Row="0"
+                  Grid.Column="0"
+                  AutoGenerateColumns="False"
+                  CanUserResizeRows="False"
+                  CanUserDeleteRows="False"
+                  BorderThickness="1.5"
+                  BorderBrush="Black"
+                  Background="{x:Null}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Kleidung"  />
+                <DataGridTextColumn Header="Saison"  />
+                <DataGridTextColumn Header="Größe"  />
+                <DataGridTextColumn Header="Menge" />
+                <DataGridTextColumn Header="Preis" />
+                <DataGridTextColumn Header="Kommentar"  />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
