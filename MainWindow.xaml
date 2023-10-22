@@ -7,11 +7,23 @@
         mc:Ignorable="d"
         
         Title="DVP"
-        Height="600"
-        Width="500"
+        Height="800"
+        MinHeight="500"
+        Width="1010"
+        MinWidth="800" 
         WindowStartupLocation="CenterScreen"
-        Background="IndianRed"
         Icon="/DVP Icon.png">
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD88282"/>
+            <GradientStop Color="#FF9192ED" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <!--<Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>-->
 
     <Grid>
         <Grid.RowDefinitions>
@@ -23,7 +35,7 @@
             Width="20"
             Height="20"
             HorizontalAlignment="Left"
-            Margin="5,2.5,1,2.5">
+            Margin="5,5,1,0">
             <StackPanel>
                 <Image Source="/Filter.png" />
                 <TextBlock>Disconnect from Server</TextBlock>
@@ -34,7 +46,7 @@
             Width="20"
             Height="20"
             HorizontalAlignment="Left"
-            Margin="26,2.5,1,2.5">
+            Margin="26,5,1,0">
             <StackPanel>
                 <Image Source="/Bearbeiten.png" />
                 <TextBlock>Disconnect from Server</TextBlock>
@@ -45,9 +57,9 @@
             Width="20"
             Height="20"
             HorizontalAlignment="Left"
-            Margin="47,2.5,1,2.5">
+            Margin="47,5,1,0">
             <StackPanel>
-                <Image Source="/Rückgängig.png" />
+                <Image Source="/Rückgängig.png" Height="16" />
                 <TextBlock>Disconnect from Server</TextBlock>
             </StackPanel>
         </Button>
@@ -56,9 +68,9 @@
             Width="20"
             Height="20"
             HorizontalAlignment="Left"
-            Margin="68,2.5,1,2.5">
+            Margin="68,5,1,0">
             <StackPanel>
-                <Image Source="/Speichern.png" />
+                <Image Source="/Speichern.png" Height="15" Width="16" />
                 <TextBlock>Disconnect from Server</TextBlock>
             </StackPanel>
         </Button>
@@ -67,9 +79,9 @@
             Width="20"
             Height="20"
             HorizontalAlignment="Left"
-            Margin="89,2.5,1,2.5">
+            Margin="89,5,1,0">
             <StackPanel>
-                <Image Source="/Drucken.png" />
+                <Image Source="/Drucken.png" Height="16" />
                 <TextBlock>Disconnect from Server</TextBlock>
             </StackPanel>
         </Button>
@@ -78,30 +90,87 @@
             Width="20"
             Height="20"
             HorizontalAlignment="Left"
-            Margin="110,2.5,1,2.5">
+            Margin="110,5,1,0">
             <StackPanel>
-                <Image Source="/Kontakt.png" />
+                <Image Source="/Kontakt.png" Height="16" />
                 <TextBlock>Disconnect from Server</TextBlock>
             </StackPanel>
         </Button>
 
-        <DataGrid x:Name="ResultIssue"
-                  Margin="5,0,5,5"
-                  Grid.Row="1"
+        <Button
+            Width="20"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="510,5,0,0">
+            <StackPanel>
+                <Image Source="/Filter.png" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Grid Grid.Row="1"
+              Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid x:Name="ClothesDetailsDataGrid"
+                  Grid.Row="0"
+                  Grid.Column="0"
                   AutoGenerateColumns="False"
                   CanUserResizeRows="False"
                   CanUserDeleteRows="False"
-                  BorderThickness="1" >
+                  BorderThickness="1"
+                  BorderBrush="Black"
+                  Background="{x:Null}">
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Saison"  />
-                <DataGridTextColumn Header="Kleidung"  />
-                <DataGridTextColumn Header="Größe"  />
-                <DataGridTextColumn Header="Menge" />
-                <DataGridTextColumn Header="Preis" />
-                <DataGridTextColumn Header="Kommentar"  />
-            </DataGrid.Columns>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Kleidung"  />
+                    <DataGridTextColumn Header="Saison"  />
+                    <DataGridTextColumn Header="Größe"  />
+                    <DataGridTextColumn Header="Menge" />
+                    <DataGridTextColumn Header="Preis" />
+                    <DataGridTextColumn Header="Kommentar"  />
+                </DataGrid.Columns>
 
-        </DataGrid>
+            </DataGrid>
+
+            <GridSplitter Grid.Column="1"
+                      HorizontalAlignment="Center"
+                      Width="10"
+                      Margin="0,0,0,0">
+                <GridSplitter.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDA8585"/>
+                        <GradientStop Color="#FF9794ED" Offset="1"/>
+                    </LinearGradientBrush>
+                </GridSplitter.Background>
+            </GridSplitter>
+
+            <DataGrid x:Name="EmployeeDetailsDataGrid"
+                  Grid.Row="1"
+                  Grid.Column="2"
+                  AutoGenerateColumns="False"
+                  CanUserResizeRows="False"
+                  CanUserDeleteRows="False"
+                  BorderThickness="1"
+                  BorderBrush="Black"
+                  Background="{x:Null}" AllowDrop="True">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mitarbeiter"  />
+                    <DataGridTextColumn Header="Kleidung"  />
+                    <DataGridTextColumn Header="Saison"  />
+                    <DataGridTextColumn Header="Größe"  />
+                    <DataGridTextColumn Header="Menge" />
+                    <DataGridTextColumn Header="Kommentar"  />
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </Grid>
+
     </Grid>
 </Window>
