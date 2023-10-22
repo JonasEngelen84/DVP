@@ -16,8 +16,8 @@
 
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FFD88282"/>
-            <GradientStop Color="#FF9192ED" Offset="1"/>
+            <GradientStop Color="#FF736969"/>
+            <GradientStop Color="#FFBABABA" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
 
@@ -109,11 +109,11 @@
         </Button>
 
         <Grid Grid.Row="1"
-              Margin="0,5,0,0">
+              Margin="5,5,5,5">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <DataGrid x:Name="ClothesDetailsDataGrid"
@@ -139,17 +139,16 @@
 
             <GridSplitter Grid.Column="1"
                       HorizontalAlignment="Center"
-                      Width="10"
-                      Margin="0,0,0,0">
+                      Width="10">
                 <GridSplitter.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFDA8585"/>
-                        <GradientStop Color="#FF9794ED" Offset="1"/>
+                        <GradientStop Color="#FF736969"/>
+                        <GradientStop Color="#FFBDBDBD" Offset="1"/>
                     </LinearGradientBrush>
                 </GridSplitter.Background>
             </GridSplitter>
 
-            <DataGrid x:Name="EmployeeDetailsDataGrid"
+            <DataGrid x:Name="EmployeeDetailsDataGrid" 
                   Grid.Row="1"
                   Grid.Column="2"
                   AutoGenerateColumns="False"
