@@ -13,8 +13,6 @@
                   AutoGenerateColumns="False"
                   CanUserResizeRows="False"
                   CanUserDeleteRows="False"
-                  BorderThickness="1.5"
-                  BorderBrush="Black"
                   Background="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Kleidung"  />
