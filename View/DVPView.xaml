@@ -13,8 +13,8 @@
             <ColumnDefinition Width="*" MinWidth="1"/>
         </Grid.ColumnDefinitions>
 
-        <components:EmployeesDetails/>
-        <components:ClothesDetails Grid.Column="2"/>
+        <components:EmployeesDetails DataContext="{Binding EmployeesDetailsViewModel}"/>
+        <components:ClothesDetails Grid.Column="2" DataContext="{Binding ClothesDetailsViewModel}"/>
 
         <GridSplitter Grid.Column="1" HorizontalAlignment="Center" Width="24" Margin="0,218,0,0">
             <GridSplitter.Background>
@@ -26,7 +26,8 @@
         </GridSplitter>
 
         <Button Width="24" Height="24" Grid.Column="1" Margin="0,163,0,0" 
-                VerticalAlignment="Top" BorderBrush="{x:Null}" Cursor="Hand">
+                VerticalAlignment="Top" BorderBrush="{x:Null}" Cursor="Hand"
+                x:Name="PlusButton" Command="{Binding EditPlusCommand}">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="24"/>
@@ -35,7 +36,8 @@
         </Button>
 
         <Button Width="24" Height="24" Grid.Column="1" Margin="0,190,0,0"
-                VerticalAlignment="Top" BorderBrush="{x:Null}" Cursor="Hand">
+                VerticalAlignment="Top" BorderBrush="{x:Null}" Cursor="Hand"
+                x:Name="MinusButton" Command="{Binding EditMinusCommand}">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="24"/>
@@ -43,37 +45,49 @@
             </Button.Resources>
         </Button>
 
-        <Button Width="25" Height="24" VerticalAlignment="Top" Grid.Column="1" Cursor="Hand">
+        <Button Width="25" Height="24" VerticalAlignment="Top"
+                Grid.Column="1" Cursor="Hand"
+                x:Name="FilterButton" Command="{Binding FilterDataGridCommand}">
             <StackPanel>
                 <Image Source="/Filter.png" Height="21" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top" Margin="0,27,0,0" Grid.Column="1" Cursor="Hand">
+        <Button Width="24" Height="24" VerticalAlignment="Top"
+                Margin="0,27,0,0" Grid.Column="1" Cursor="Hand"
+                x:Name="EditButton" Command="{Binding EditModelsCommand}">
             <StackPanel>
                 <Image Source="/Bearbeiten.png" Height="21" Width="20" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top" Margin="0,54,0,0" Grid.Column="1" Cursor="Hand">
+        <Button Width="24" Height="24" VerticalAlignment="Top"
+                Margin="0,54,0,0" Grid.Column="1" Cursor="Hand"
+                x:Name="BackwardButton" Command="{Binding BackwardCommand}">
             <StackPanel>
                 <Image Source="/Rückgängig.png" Height="21" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top" Margin="0,81,0,0" Grid.Column="1" Cursor="Hand">
+        <Button Width="24" Height="24" VerticalAlignment="Top"
+                Margin="0,81,0,0" Grid.Column="1" Cursor="Hand"
+                x:Name="SafeButton" Command="{Binding SafeCommand}">
             <StackPanel>
                 <Image Source="/Speichern.png" Height="21" Width="20" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top" Margin="0,108,0,0" Grid.Column="1" Cursor="Hand">
+        <Button Width="24" Height="24" VerticalAlignment="Top"
+                Margin="0,108,0,0" Grid.Column="1" Cursor="Hand"
+                x:Name="PrintButton" Command="{Binding PrintCommand}">
             <StackPanel>
                 <Image Source="/Drucken.png" Height="21" Width="20" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top" Margin="0,135,0,0" Grid.Column="1" Cursor="Hand">
+        <Button Width="24" Height="24" VerticalAlignment="Top"
+                Margin="0,135,0,0" Grid.Column="1" Cursor="Hand"
+                x:Name="ContactButton" Command="{Binding ContactCommand}">
             <StackPanel>
                 <Image Source="/Kontakt.png" Height="21" Width="20" />
             </StackPanel>

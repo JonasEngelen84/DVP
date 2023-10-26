@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,17 +13,19 @@ namespace DVP.Models
         public string Name { get; set; }
         public string Season { get; set; }
         public string Size { get; set; }
-        public int Count { get; set; }
+        public int Quantity { get; set; }
         public int Prize { get; set; }
         public string Comment { get; set; }
 
-        public Clothes(string categorie, string name, string size, string season, int count, int prize)
+        public static ObservableCollection<Clothes> ClothesList { get; }
+
+        public Clothes(string categorie, string name, string size, string season, int quantity, int prize)
         {
             Categorie = categorie;
             Name = name;
             Size = size;
             Season = season;
-            Count = count;
+            Quantity = quantity;
             Prize = prize;
         }
     }

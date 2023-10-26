@@ -64,6 +64,9 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Services\API\IClothesInformationProvider.cs" />
     <Compile Include="Services\API\IEmployeeInformationProvider.cs" />
+    <Compile Include="ViewModels\ClothesDetailsViewModel.cs" />
+    <Compile Include="ViewModels\DVPViewModel.cs" />
+    <Compile Include="ViewModels\EmployeesDetailsViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="View\DVPView.xaml.cs">
       <DependentUpon>DVPView.xaml</DependentUpon>
