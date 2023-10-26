@@ -62,8 +62,6 @@
       <DependentUpon>EmployeesDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
-    <Compile Include="Services\API\IClothesInformationProvider.cs" />
-    <Compile Include="Services\API\IEmployeeInformationProvider.cs" />
     <Compile Include="ViewModels\ClothesDetailsViewModel.cs" />
     <Compile Include="ViewModels\DVPViewModel.cs" />
     <Compile Include="ViewModels\EmployeesDetailsViewModel.cs" />
@@ -146,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Services\API\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

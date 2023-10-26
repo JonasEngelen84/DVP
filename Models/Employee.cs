@@ -12,14 +12,14 @@ namespace DVP.Models
         public string Firstname { get; set; }
         public string Lastname { get; set; }
 
-        private List<Clothes> Clothes { get; set; }
+        private List<Clothes> EmployeeClothesList { get; set; }
 
         public Employee(int id, string firstname,string lastname)
         {
             Id = id;
             Firstname = firstname;
             Lastname = lastname;
-            Clothes = new List<Clothes>();
+            EmployeeClothesList = new List<Clothes>();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace DVP.Models
         public string Categorie { get; set; }
         public string Name { get; set; }
         public string Season { get; set; }
-        public string Size { get; set; }
+        public string Size { get; }
         public int Quantity { get; set; }
         public int Prize { get; set; }
         public string Comment { get; set; }
