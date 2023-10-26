@@ -8,14 +8,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DataGrid x:Name="ClothesDetailsDataGrid"
-                  Grid.Row="0"
-                  Grid.Column="0"
                   AutoGenerateColumns="False"
-                  CanUserResizeRows="False"
-                  CanUserDeleteRows="False"
+                  AllowDrop="True"
                   Background="{x:Null}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Kleidung"  />
+                <DataGridTextColumn Header="Kategorie"  />
+                <DataGridTextColumn Header="Name"  />
                 <DataGridTextColumn Header="Saison"  />
                 <DataGridTextColumn Header="Größe"  />
                 <DataGridTextColumn Header="Menge" />

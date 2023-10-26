@@ -61,6 +61,7 @@
     <Compile Include="Components\EmployeesDetails.xaml.cs">
       <DependentUpon>EmployeesDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="View\DVPView.xaml.cs">
       <DependentUpon>DVPView.xaml</DependentUpon>
     </Compile>
@@ -91,10 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Clothes.cs" />
-    <Compile Include="Models\Headgear.cs" />
-    <Compile Include="Models\Jacket.cs" />
-    <Compile Include="Models\Pants.cs" />
-    <Compile Include="Models\Shirt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -144,9 +141,6 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="ViewModel\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="View\minus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

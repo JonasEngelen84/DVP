@@ -17,7 +17,6 @@ namespace DVP
         {
             MainWindow = new MainWindow();
             MainWindow.Show();
-
             base.OnStartup(e);
         }
     }
