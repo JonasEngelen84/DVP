@@ -12,13 +12,13 @@
                   AllowDrop="True"
                   Background="{x:Null}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Kategorie"  />
-                <DataGridTextColumn Header="Name"  />
-                <DataGridTextColumn Header="Saison"  />
-                <DataGridTextColumn Header="Größe"  />
-                <DataGridTextColumn Header="Menge" />
-                <DataGridTextColumn Header="Preis" />
-                <DataGridTextColumn Header="Kommentar"  />
+                <DataGridTextColumn Header="Kategorie" Binding="{Binding Categorie}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Saison" Binding="{Binding Saison}"/>
+                <DataGridTextColumn Header="Größe" Binding="{Binding Size}"/>
+                <DataGridTextColumn Header="Menge" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Preis" Binding="{Binding Prize}"/>
+                <DataGridTextColumn Header="Kommentar" Binding="{Binding Comment}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
