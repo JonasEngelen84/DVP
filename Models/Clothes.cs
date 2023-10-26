@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DVP.Models
 {
-    internal class Clothes
+    public class Clothes
     {
         public string Categorie { get; set; }
         public string Name { get; set; }
