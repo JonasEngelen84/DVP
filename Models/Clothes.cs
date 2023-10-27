@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVP.Services;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace DVP.Models
         public int Prize { get; set; }
         public string Comment { get; set; }
 
-        public static ObservableCollection<Clothes> ClothesList { get; }
+        private static readonly ClothesCollectonProvider _clothesCollectonProvider = new ClothesCollectonProvider();
 
         public Clothes(string categorie, string name, string size, string season, int quantity, int prize)
         {
@@ -27,6 +28,11 @@ namespace DVP.Models
             Season = season;
             Quantity = quantity;
             Prize = prize;
+        }
+
+        public void AddClothesToCollection(Clothes clothes)
+        {
+            ClothesCollectonProvider.ClothesCollection.Add(this);
         }
     }
 }
