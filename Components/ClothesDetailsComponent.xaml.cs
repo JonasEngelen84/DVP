@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DVP.Components
 {
     /// <summary>
-    /// Interaktionslogik für EmployeesDetails.xaml
+    /// Interaktionslogik für ClothesDetailsComponent.xaml
     /// </summary>
-    public partial class EmployeesDetails : UserControl
+    public partial class ClothesDetailsComponent : UserControl
     {
-        public EmployeesDetails()
+        public ClothesDetailsComponent()
         {
             InitializeComponent();
         }

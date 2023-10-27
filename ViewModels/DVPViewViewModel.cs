@@ -7,10 +7,10 @@ using System.Windows.Input;
 
 namespace DVP.ViewModels
 {
-    internal class DVPViewModel
+    internal class DVPViewViewModel
     {
-        public EmployeesDetailsViewModel EmployeesDetailsViewModel { get; }
-        public ClothesDetailsViewModel ClothesDetailsViewModel { get; }
+        public EmployeesDetailsComponentViewModel EmployeesDetailsViewModel { get; }
+        public ClothesDetailsComponentViewModel ClothesDetailsViewModel { get; }
 
         public ICommand FilterDataGridCommand { get; }
         public ICommand EditModelsCommand { get; }

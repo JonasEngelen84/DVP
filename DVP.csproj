@@ -55,29 +55,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Components\ClothesDetails.xaml.cs">
-      <DependentUpon>ClothesDetails.xaml</DependentUpon>
+    <Compile Include="Components\ClothesDetailsComponent.xaml.cs">
+      <DependentUpon>ClothesDetailsComponent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Components\EmployeesDetails.xaml.cs">
-      <DependentUpon>EmployeesDetails.xaml</DependentUpon>
+    <Compile Include="Components\EmployeesDetailsComponent.xaml.cs">
+      <DependentUpon>EmployeesDetailsComponent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
-    <Compile Include="ViewModels\ClothesDetailsViewModel.cs" />
-    <Compile Include="ViewModels\DVPViewModel.cs" />
-    <Compile Include="ViewModels\EmployeesDetailsViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="View\DVPView.xaml.cs">
+    <Compile Include="Services\ClothesCollectonProvider.cs" />
+    <Compile Include="Services\EmployeeCollectionProvider.cs" />
+    <Compile Include="ViewModels\ClothesDetailsComponentViewModel.cs" />
+    <Compile Include="ViewModels\DVPViewViewModel.cs" />
+    <Compile Include="ViewModels\EmployeesDetailsComponentViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Views\DVPView.xaml.cs">
       <DependentUpon>DVPView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Components\ClothesDetails.xaml">
+    <Page Include="Components\ClothesDetailsComponent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Components\EmployeesDetails.xaml">
+    <Page Include="Components\EmployeesDetailsComponent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -85,11 +87,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\DVPView.xaml">
+    <Page Include="Views\DVPView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="Services\API\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

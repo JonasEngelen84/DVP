@@ -18,7 +18,7 @@ namespace DVP.Models
         public int Prize { get; set; }
         public string Comment { get; set; }
 
-        private static readonly ClothesCollectonProvider _clothesCollectonProvider = new ClothesCollectonProvider();
+        public static ClothesCollectonProvider _clothesCollectonProvider = new ClothesCollectonProvider();
 
         public Clothes(string categorie, string name, string size, string season, int quantity, int prize)
         {
@@ -32,7 +32,7 @@ namespace DVP.Models
 
         public void AddClothesToCollection(Clothes clothes)
         {
-            ClothesCollectonProvider.ClothesCollection.Add(this);
+            _clothesCollectonProvider.ClothesCollection.Add(this);
         }
     }
 }

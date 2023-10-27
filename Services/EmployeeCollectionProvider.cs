@@ -10,6 +10,6 @@ namespace DVP.Services
 {
     public class EmployeeCollectionProvider
     {
-        public static ObservableCollection<Employee> EmployeeCollection { get; }
+        public ObservableCollection<Employee> EmployeeCollection { get; }
     }
 }

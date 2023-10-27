@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DVP.ViewModels
 {
-    internal class ClothesDetailsViewModel
+    public class ClothesDetailsComponentViewModel
     {
     }
 }

@@ -18,7 +18,7 @@ namespace DVP
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new DVPViewModel()
+                DataContext = new DVPViewViewModel()
             };
 
             MainWindow.Show();

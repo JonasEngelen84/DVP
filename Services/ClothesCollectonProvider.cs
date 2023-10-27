@@ -10,6 +10,6 @@ namespace DVP.Services
 {
     public class ClothesCollectonProvider
     {
-        public static ObservableCollection<Clothes> ClothesCollection { get; }
+        public ObservableCollection<Clothes> ClothesCollection { get;  }
     }
 }
