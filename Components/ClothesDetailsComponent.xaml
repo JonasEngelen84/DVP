@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DVP.Components"
+             xmlns:viewmodels="clr-namespace:DVP.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:BaseViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -12,9 +14,9 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Kategorie" Binding="{Binding Categorie}"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="Saison" Binding="{Binding Saison}"/>
+                <DataGridTextColumn Header="Saison" Binding="{Binding Season}"/>
                 <DataGridTextColumn Header="Größe" Binding="{Binding Size}"/>
-                <DataGridTextColumn Header="Menge" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Menge" Binding="{Binding Quantity}"/>
                 <DataGridTextColumn Header="Preis" Binding="{Binding Prize}"/>
                 <DataGridTextColumn Header="Kommentar" Binding="{Binding Comment}"/>
             </DataGrid.Columns>

@@ -15,12 +15,12 @@ namespace DVP.Models
         public string Season { get; set; }
         public string Size { get; }
         public int Quantity { get; set; }
-        public int Prize { get; set; }
+        public double Prize { get; set; }
         public string Comment { get; set; }
 
-        public static ClothesCollectonProvider _clothesCollectonProvider = new ClothesCollectonProvider();
+        public ClothesCollectionProvider _clothesCollectonProvider = new ClothesCollectionProvider();
 
-        public Clothes(string categorie, string name, string size, string season, int quantity, int prize)
+        public Clothes(string categorie, string name, string size, string season, int quantity, double prize)
         {
             Categorie = categorie;
             Name = name;
@@ -28,11 +28,6 @@ namespace DVP.Models
             Season = season;
             Quantity = quantity;
             Prize = prize;
-        }
-
-        public void AddClothesToCollection(Clothes clothes)
-        {
-            _clothesCollectonProvider.ClothesCollection.Add(this);
         }
     }
 }

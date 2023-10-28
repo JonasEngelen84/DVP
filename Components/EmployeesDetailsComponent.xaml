@@ -16,7 +16,7 @@
                 <DataGridTextColumn Header="Kleidung" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Saison" Binding="{Binding Season}"/>
                 <DataGridTextColumn Header="Größe" Binding="{Binding Size}"/>
-                <DataGridTextColumn Header="Menge" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Menge" Binding="{Binding Quantity}"/>
                 <DataGridTextColumn Header="Kommentar" Binding="{Binding Comment}"/>
             </DataGrid.Columns>
         </DataGrid>

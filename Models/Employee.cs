@@ -24,10 +24,5 @@ namespace DVP.Models
             Lastname = lastname;
             EmployeeClothesList = new List<Clothes>();
         }
-
-        public void AddEmployeeToCollection(Clothes clothes)
-        {
-            _employeeCollectionProvider.EmployeeCollection.Add(this);
-        }
     }
 }

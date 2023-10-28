@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DVP.Services;
+using DVP.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,9 @@ namespace DVP.Components
         public ClothesDetailsComponent()
         {
             InitializeComponent();
+
+            this.DataContext = new ClothesDetailsComponentViewModel();
+            ClothesDetailsDataGrid.ItemsSource = ClothesCollectionProvider.ClothesCollection;
         }
     }
 }
