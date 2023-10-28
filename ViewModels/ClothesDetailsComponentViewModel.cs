@@ -2,6 +2,6 @@
 {
     public class ClothesDetailsComponentViewModel
     {
-        //ClothesDetailsDataGrid.ItemsSource = ClothesCollectionProvider.ClothesCollection
+        
     }
 }

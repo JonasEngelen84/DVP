@@ -23,6 +23,6 @@
     </Window.Background>
 
     <Grid>
-        <view:DVPView/>
+        <view:DVPView DataContext="{Binding DVPViewViewModel}"/>
     </Grid>
 </Window>
