@@ -26,7 +26,6 @@ namespace DVP.Components
         {
             InitializeComponent();
 
-            this.DataContext = new ClothesDetailsComponentViewModel();
             ClothesDetailsDataGrid.ItemsSource = ClothesCollectionProvider.ClothesCollection;
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVP.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace DVP.Components
         public EmployeesDetailsComponent()
         {
             InitializeComponent();
+
+            EmployeesDetailsDataGrid.ItemsSource = EmployeeCollectionProvider.EmployeeCollection;
         }
     }
 }

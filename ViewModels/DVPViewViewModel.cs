@@ -26,9 +26,9 @@ namespace DVP.ViewModels
 
         public DVPViewViewModel()
         {
-            _clothesCollectionProvider.AddClothesToCollection(new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 12, 19.99));
-            _clothesCollectionProvider.AddClothesToCollection(new Clothes("Shirt", "Wintershirt", "M", "Winter", 8, 19.99));
-            _clothesCollectionProvider.AddClothesToCollection(new Clothes("Hose", "Sommerhose", "XL", "Sommer", 10, 50.29));
+            _clothesCollectionProvider.AddToClothesCollection(new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 12, 19.99));
+            _clothesCollectionProvider.AddToClothesCollection(new Clothes("Shirt", "Wintershirt", "M", "Winter", 8, 19.99));
+            _clothesCollectionProvider.AddToClothesCollection(new Clothes("Hose", "Sommerhose", "XL", "Sommer", 10, 50.29));
         }
         
     }

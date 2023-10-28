@@ -12,9 +12,19 @@ namespace DVP.Services
     {
         public static ObservableCollection<Clothes> ClothesCollection = new ObservableCollection<Clothes>();
 
-        public void AddClothesToCollection(Clothes clothes)
+        public void AddToClothesCollection(Clothes clothes)
         {
             ClothesCollection.Add(clothes);
+        }
+
+        public void DeleteClothesToCollection(Clothes clothes)
+        {
+            ClothesCollection.Remove(clothes);
+        }
+
+        public void Contain(Clothes clothes)
+        {
+            ClothesCollection.Contains(clothes);
         }
     }
 }
