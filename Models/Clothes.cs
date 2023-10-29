@@ -1,10 +1,4 @@
-﻿using DVP.Services;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace DVP.Models
 {
@@ -18,8 +12,6 @@ namespace DVP.Models
         public double Prize { get; set; }
         public string Comment { get; set; }
 
-        public ClothesCollectionProvider _clothesCollectonProvider = new ClothesCollectionProvider();
-
         public Clothes(string categorie, string name, string size, string season, int quantity, double prize)
         {
             Categorie = categorie;
@@ -28,6 +20,15 @@ namespace DVP.Models
             Season = season;
             Quantity = quantity;
             Prize = prize;
+        }
+
+        public Clothes(string categorie, string name, string size, string season, int quantity)
+        {
+            Categorie = categorie;
+            Name = name;
+            Size = size;
+            Season = season;
+            Quantity = quantity;
         }
     }
 }

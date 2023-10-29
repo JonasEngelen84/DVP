@@ -62,8 +62,6 @@
       <DependentUpon>EmployeesDetailsComponent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
-    <Compile Include="Services\ClothesCollectionProvider.cs" />
-    <Compile Include="Services\EmployeeCollectionProvider.cs" />
     <Compile Include="ViewModels\ClothesDetailsComponentViewModel.cs" />
     <Compile Include="ViewModels\DVPViewViewModel.cs" />
     <Compile Include="ViewModels\EmployeesDetailsComponentViewModel.cs" />

@@ -1,11 +1,4 @@
-﻿using DVP.Models;
-using DVP.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace DVP.ViewModels
 {
@@ -13,7 +6,6 @@ namespace DVP.ViewModels
     {
         public EmployeesDetailsComponentViewModel EmployeesDetailsViewModel { get; }
         public ClothesDetailsComponentViewModel ClothesDetailsViewModel { get; }
-        public ClothesCollectionProvider _clothesCollectionProvider = new ClothesCollectionProvider();
 
         public ICommand FilterDataGridCommand { get; }
         public ICommand EditModelsCommand { get; }
@@ -26,9 +18,8 @@ namespace DVP.ViewModels
 
         public DVPViewViewModel()
         {
-            _clothesCollectionProvider.AddToClothesCollection(new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 12, 19.99));
-            _clothesCollectionProvider.AddToClothesCollection(new Clothes("Shirt", "Wintershirt", "M", "Winter", 8, 19.99));
-            _clothesCollectionProvider.AddToClothesCollection(new Clothes("Hose", "Sommerhose", "XL", "Sommer", 10, 50.29));
+            ClothesDetailsViewModel = new ClothesDetailsComponentViewModel();
+            EmployeesDetailsViewModel = new EmployeesDetailsComponentViewModel();
         }
         
     }

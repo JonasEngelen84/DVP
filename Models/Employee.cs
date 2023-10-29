@@ -1,9 +1,4 @@
-﻿using DVP.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DVP.Models
 {
@@ -13,9 +8,7 @@ namespace DVP.Models
         public string Firstname { get; set; }
         public string Lastname { get; set; }
 
-        private List<Clothes> EmployeeClothesList { get; set; }
-
-        private static EmployeeCollectionProvider _employeeCollectionProvider = new EmployeeCollectionProvider();
+        public List<Clothes> EmployeeClothesList { get; set; }
 
         public Employee(int id, string firstname,string lastname)
         {
