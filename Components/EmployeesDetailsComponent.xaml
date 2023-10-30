@@ -13,7 +13,7 @@
                 <DataGridTextColumn Header="Personal Nr." Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Nachname" Binding="{Binding Lastname}"/>
                 <DataGridTextColumn Header="Vorname" Binding="{Binding Firstname}"/>
-                <DataGridTextColumn Header="Kleidung" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Kleidung" Binding="{Binding Path=EmployeeClothesList}"/>
                 <DataGridTextColumn Header="Saison" Binding="{Binding Season}"/>
                 <DataGridTextColumn Header="Größe" Binding="{Binding Size}"/>
                 <DataGridTextColumn Header="Menge" Binding="{Binding Quantity}"/>

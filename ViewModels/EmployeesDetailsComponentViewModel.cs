@@ -23,7 +23,7 @@ namespace DVP.ViewModels
             jonas.EmployeeClothesList.Add(new Clothes("Kopfbedeckung", "Winterkappe", "", "Winter", 1));
             EmployeeCollection.Add(jonas);
 
-            Employee markus = new Employee(123, "Markus", "Öttken");
+            Employee markus = new Employee(123, "Markus", "Oettken");
             markus.EmployeeClothesList.Add(new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 2));
             markus.EmployeeClothesList.Add(new Clothes("Shirt", "Wintershirt", "M", "Winter", 3));
             markus.EmployeeClothesList.Add(new Clothes("Hose", "Sommerhose", "XL", "Sommer", 2));
