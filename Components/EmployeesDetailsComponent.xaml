@@ -10,10 +10,10 @@
         <DataGrid x:Name="EmployeesDetailsDataGrid" AutoGenerateColumns="False"
                   AllowDrop="True" Background="{x:Null}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Personal Nr." Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Nachname" Binding="{Binding Lastname}"/>
-                <DataGridTextColumn Header="Vorname" Binding="{Binding Firstname}"/>
-                <DataGridTextColumn Header="Kleidung" Binding="{Binding Path=EmployeeClothesList}"/>
+                <DataGridTextColumn Header="Personal Nr." Binding="{Binding OwnerId}"/>
+                <DataGridTextColumn Header="Nachname" Binding="{Binding OwnerLastname}"/>
+                <DataGridTextColumn Header="Vorname" Binding="{Binding OwnerFirstname}"/>
+                <DataGridTextColumn Header="Kleidung" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Saison" Binding="{Binding Season}"/>
                 <DataGridTextColumn Header="Größe" Binding="{Binding Size}"/>
                 <DataGridTextColumn Header="Menge" Binding="{Binding Quantity}"/>

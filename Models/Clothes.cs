@@ -11,6 +11,9 @@ namespace DVP.Models
         public int Quantity { get; set; }
         public double Prize { get; set; }
         public string Comment { get; set; }
+        public int OwnerId { get; set; }
+        public string OwnerLastname { get; set; }
+        public string OwnerFirstname { get; set; }
 
         public Clothes(string categorie, string name, string size, string season, int quantity, double prize)
         {
@@ -22,13 +25,16 @@ namespace DVP.Models
             Prize = prize;
         }
 
-        public Clothes(string categorie, string name, string size, string season, int quantity)
+        public Clothes(string categorie, string name, string size, string season, int quantity, int ownerId, string ownerFirstname, string ownerLastname)
         {
             Categorie = categorie;
             Name = name;
             Size = size;
             Season = season;
             Quantity = quantity;
+            OwnerId = ownerId;
+            OwnerFirstname = ownerFirstname;
+            OwnerLastname = ownerLastname;
         }
     }
 }

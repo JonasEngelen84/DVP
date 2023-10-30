@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DVP.Views"
              xmlns:components="clr-namespace:DVP.Components"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="900" Foreground="{x:Null}">
+             d:DesignHeight="800" d:DesignWidth="1000" Foreground="{x:Null}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" MinWidth="1"/>

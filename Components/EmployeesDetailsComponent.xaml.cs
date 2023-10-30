@@ -8,13 +8,14 @@ namespace DVP.Components
     /// </summary>
     public partial class EmployeesDetailsComponent : UserControl
     {
+        public EmployeesDetailsComponentViewModel _employeesDetailsComponentViewModel;
+
         public EmployeesDetailsComponent()
         {
             InitializeComponent();
-
-            this.DataContext = new EmployeesDetailsComponentViewModel();
-
-            EmployeesDetailsDataGrid.ItemsSource = EmployeesDetailsComponentViewModel.EmployeeCollection;
+            _employeesDetailsComponentViewModel = new EmployeesDetailsComponentViewModel();
+            this.DataContext = _employeesDetailsComponentViewModel;
+            EmployeesDetailsDataGrid.ItemsSource = _employeesDetailsComponentViewModel.AllEmployeeClothesCollection;
         }
     }
 }
