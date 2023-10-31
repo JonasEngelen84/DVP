@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DVP.Views"
-             xmlns:components="clr-namespace:DVP.Components"
+             xmlns:components="clr-namespace:DVP.Components" xmlns:viewmodels="clr-namespace:DVP.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ClothesDetailsComponentViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1000" Foreground="{x:Null}">
     <Grid>
@@ -17,7 +17,7 @@
         <components:EmployeesDetailsComponent DataContext="{Binding EmployeesDetailsComponentViewModel}"/>
         <components:ClothesDetailsComponent Grid.Column="2" DataContext="{Binding ClothesDetailsComponentViewModel}"/>
 
-        <GridSplitter Grid.Column="1" HorizontalAlignment="Center" Width="24" Margin="0,218,0,0">
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Center" Width="24" Margin="0,218,0,0" Cursor="">
             <GridSplitter.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF8C8989" Offset="0.013"/>

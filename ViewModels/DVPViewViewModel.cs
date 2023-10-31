@@ -1,8 +1,9 @@
-﻿using System.Windows.Input;
+﻿using DVP.Stores;
+using System.Windows.Input;
 
 namespace DVP.ViewModels
 {
-    internal class DVPViewViewModel
+    public class DVPViewViewModel
     {
         public EmployeesDetailsComponentViewModel EmployeesDetailsViewModel { get; }
         public ClothesDetailsComponentViewModel ClothesDetailsViewModel { get; }
@@ -16,10 +17,10 @@ namespace DVP.ViewModels
         public ICommand EditPlusCommand { get; }
         public ICommand EditMinusCommand { get; }
 
-        public DVPViewViewModel()
+        public DVPViewViewModel(SelectedEmployeeStore _selectedEmployeeStore)
         {
-            ClothesDetailsViewModel = new ClothesDetailsComponentViewModel();
-            EmployeesDetailsViewModel = new EmployeesDetailsComponentViewModel();
+            ClothesDetailsViewModel = new ClothesDetailsComponentViewModel(_selectedEmployeeStore);
+            EmployeesDetailsViewModel = new EmployeesDetailsComponentViewModel(_selectedEmployeeStore);
         }
         
     }

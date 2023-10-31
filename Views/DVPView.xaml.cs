@@ -11,8 +11,6 @@ namespace DVP.Views
         public DVPView()
         {
             InitializeComponent();
-
-            this.DataContext = new DVPViewViewModel();
         }
     }
 }

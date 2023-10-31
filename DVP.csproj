@@ -62,10 +62,11 @@
       <DependentUpon>EmployeesDetailsComponent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Stores\SelectedEmployeeStore.cs" />
     <Compile Include="ViewModels\ClothesDetailsComponentViewModel.cs" />
     <Compile Include="ViewModels\DVPViewViewModel.cs" />
     <Compile Include="ViewModels\EmployeesDetailsComponentViewModel.cs" />
-    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\DVPView.xaml.cs">
       <DependentUpon>DVPView.xaml</DependentUpon>
     </Compile>

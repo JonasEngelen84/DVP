@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DVP.ViewModels
 {
-    internal class BaseViewModel : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -1,13 +1,14 @@
 ﻿using DVP.Models;
+using DVP.Stores;
 using System.Collections.ObjectModel;
 
 namespace DVP.ViewModels
 {
-    public class ClothesDetailsComponentViewModel
+    public class ClothesDetailsComponentViewModel : ViewModelBase
     {
         public ObservableCollection<Clothes> ClothesCollection { get; set; }
 
-        public ClothesDetailsComponentViewModel()
+        public ClothesDetailsComponentViewModel(SelectedEmployeeStore _selectedEmployeeStore)
         {
             ClothesCollection = new ObservableCollection<Clothes>();
 

@@ -8,14 +8,15 @@ namespace DVP.Components
     /// </summary>
     public partial class ClothesDetailsComponent : UserControl
     {
+        //private ClothesDetailsComponentViewModel _clothesDetailsComponentViewModel;
+
         public ClothesDetailsComponent()
         {
-            ClothesDetailsComponentViewModel _clothesDetailsComponentViewModel;
-
             InitializeComponent();
-            _clothesDetailsComponentViewModel = new ClothesDetailsComponentViewModel();
-            this.DataContext = new ClothesDetailsComponentViewModel();
-            ClothesDetailsDataGrid.ItemsSource = _clothesDetailsComponentViewModel.ClothesCollection;
+            
+            //_clothesDetailsComponentViewModel = new ClothesDetailsComponentViewModel();
+            
+            //ClothesDetailsDataGrid.ItemsSource = _clothesDetailsComponentViewModel.ClothesCollection;
         }
     }
 }
