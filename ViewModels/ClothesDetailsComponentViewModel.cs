@@ -5,7 +5,7 @@ namespace DVP.ViewModels
 {
     public class ClothesDetailsComponentViewModel
     {
-        public static ObservableCollection<Clothes> ClothesCollection { get; set; }
+        public ObservableCollection<Clothes> ClothesCollection { get; set; }
 
         public ClothesDetailsComponentViewModel()
         {

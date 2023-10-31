@@ -10,11 +10,12 @@ namespace DVP.Components
     {
         public ClothesDetailsComponent()
         {
+            ClothesDetailsComponentViewModel _clothesDetailsComponentViewModel;
+
             InitializeComponent();
-
+            _clothesDetailsComponentViewModel = new ClothesDetailsComponentViewModel();
             this.DataContext = new ClothesDetailsComponentViewModel();
-
-            ClothesDetailsDataGrid.ItemsSource = ClothesDetailsComponentViewModel.ClothesCollection;
+            ClothesDetailsDataGrid.ItemsSource = _clothesDetailsComponentViewModel.ClothesCollection;
         }
     }
 }
