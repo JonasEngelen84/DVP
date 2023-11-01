@@ -12,8 +12,8 @@ namespace DVP.Models
         public double Prize { get; set; }
         public string Comment { get; set; }
         public int OwnerId { get; set; }
-        public string OwnerLastname { get; set; }
         public string OwnerFirstname { get; set; }
+        public string OwnerLastname { get; set; }
 
         public Clothes(string categorie, string name, string size, string season, int quantity, double prize)
         {

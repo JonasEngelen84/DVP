@@ -17,10 +17,10 @@ namespace DVP.ViewModels
         public ICommand EditPlusCommand { get; }
         public ICommand EditMinusCommand { get; }
 
-        public DVPViewViewModel(SelectedEmployeeStore _selectedEmployeeStore)
+        public DVPViewViewModel(SelectedClothesStore _selectedClothesStore)
         {
-            ClothesDetailsViewModel = new ClothesDetailsComponentViewModel(_selectedEmployeeStore);
-            EmployeesDetailsViewModel = new EmployeesDetailsComponentViewModel(_selectedEmployeeStore);
+            ClothesDetailsViewModel = new ClothesDetailsComponentViewModel(_selectedClothesStore);
+            EmployeesDetailsViewModel = new EmployeesDetailsComponentViewModel(_selectedClothesStore);
         }
         
     }

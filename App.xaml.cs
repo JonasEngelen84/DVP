@@ -9,18 +9,18 @@ namespace DVP
     /// </summary>
     public partial class App : Application
     {
-        private readonly SelectedEmployeeStore _selectedEmployeeStore;
+        private readonly SelectedClothesStore _selectedClothesStore;
 
         public App()
         {
-            _selectedEmployeeStore= new SelectedEmployeeStore();
+            _selectedClothesStore = new SelectedClothesStore();
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new DVPViewViewModel(_selectedEmployeeStore)
+                DataContext = new DVPViewViewModel(_selectedClothesStore)
             };
 
             MainWindow.Show();
