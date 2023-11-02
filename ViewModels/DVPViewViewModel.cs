@@ -22,6 +22,5 @@ namespace DVP.ViewModels
             ClothesDetailsViewModel = new ClothesDetailsComponentViewModel(_selectedClothesStore);
             EmployeesDetailsViewModel = new EmployeesDetailsComponentViewModel(_selectedClothesStore);
         }
-        
     }
 }

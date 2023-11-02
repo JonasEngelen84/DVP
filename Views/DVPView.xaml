@@ -2,11 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DVP.Views"
-             xmlns:components="clr-namespace:DVP.Components" xmlns:viewmodels="clr-namespace:DVP.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ClothesDetailsComponentViewModel}"
-             mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1000" Foreground="{x:Null}">
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:components="clr-namespace:DVP.Components"
+             mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="1000" Foreground="{x:Null}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" MinWidth="1"/>

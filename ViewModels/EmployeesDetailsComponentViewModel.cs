@@ -46,7 +46,6 @@ namespace DVP.ViewModels
                 new Clothes("Jacke", "Winterjacke", "XL", "Winter", 2, 798, "Daniel", "Nickol"),
                 new Clothes("Kopfbedeckung", "Sommerkappe", "", "Sommer", 2, 798, "Daniel", "Nickol")
             };
-
         }
     }
 }

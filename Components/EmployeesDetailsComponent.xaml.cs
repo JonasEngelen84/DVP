@@ -1,4 +1,5 @@
-﻿using DVP.ViewModels;
+﻿using DVP.Stores;
+using DVP.ViewModels;
 using System.Windows.Controls;
 
 namespace DVP.Components
@@ -8,15 +9,17 @@ namespace DVP.Components
     /// </summary>
     public partial class EmployeesDetailsComponent : UserControl
     {
-        //private EmployeesDetailsComponentViewModel _employeesDetailsComponentViewModel;
+        private readonly EmployeesDetailsComponentViewModel _employeesDetailsComponentViewModel;
 
         public EmployeesDetailsComponent()
         {
             InitializeComponent();
-            
-            //_employeesDetailsComponentViewModel = new EmployeesDetailsComponentViewModel();
 
-            //EmployeesDetailsDataGrid.ItemsSource = _employeesDetailsComponentViewModel.AllEmployeeClothesCollection;
+            _employeesDetailsComponentViewModel = new EmployeesDetailsComponentViewModel(new SelectedClothesStore());
+
+            this.DataContext = _employeesDetailsComponentViewModel;
+
+            EmployeesDetailsDataGrid.ItemsSource = _employeesDetailsComponentViewModel.AllEmployeeClothesCollection;
         }
     }
 }

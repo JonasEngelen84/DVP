@@ -7,8 +7,8 @@
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
     
     <Grid>
-        <DataGrid x:Name="EmployeesDetailsDataGrid" AutoGenerateColumns="False" AllowDrop="True"
-                  Background="{x:Null}" ItemsSource="{Binding AllEmployeeClothesCollection}">
+        <DataGrid x:Name="EmployeesDetailsDataGrid" AutoGenerateColumns="False"
+                  AllowDrop="True" Background="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Personal Nr." Binding="{Binding OwnerId}"/>
                 <DataGridTextColumn Header="Nachname" Binding="{Binding OwnerLastname}"/>
