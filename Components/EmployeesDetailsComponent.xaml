@@ -6,9 +6,24 @@
              xmlns:local="clr-namespace:DVP.Components"
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
     
-    <Grid>
-        <DataGrid x:Name="EmployeesDetailsDataGrid" AutoGenerateColumns="False"
-                  AllowDrop="True" Background="{x:Null}">
+    <Grid Margin="10">
+        <ListView x:Name="EmployeesDetailsListView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Personal Nr." DisplayMemberBinding="{Binding OwnerId}" Width="auto"/>
+                    <GridViewColumn Header="Nachname" DisplayMemberBinding="{Binding OwnerLastname}" Width="auto"/>
+                    <GridViewColumn Header="Vorname" DisplayMemberBinding="{Binding OwnerFirstname}" Width="auto"/>
+                    <GridViewColumn Header="Kleidung" DisplayMemberBinding="{Binding Name}" Width="auto"/>
+                    <GridViewColumn Header="Saison" DisplayMemberBinding="{Binding Season}" Width="auto"/>
+                    <GridViewColumn Header="Größe" DisplayMemberBinding="{Binding Size}" Width="auto"/>
+                    <GridViewColumn Header="Menge" DisplayMemberBinding="{Binding Quantity}" Width="auto"/>
+                    <GridViewColumn Header="Kommentar" DisplayMemberBinding="{Binding Comment}" Width="auto"/>
+                </GridView>
+            </ListView.View>
+         </ListView>
+
+        <!--<DataGrid x:Name="EmployeesDetailsDataGrid" AutoGenerateColumns="False"
+                  AllowDrop="True" Background="{x:Null}" ItemsSource="{Binding _allEmployeeClothesCollection}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Personal Nr." Binding="{Binding OwnerId}"/>
                 <DataGridTextColumn Header="Nachname" Binding="{Binding OwnerLastname}"/>
@@ -19,6 +34,6 @@
                 <DataGridTextColumn Header="Menge" Binding="{Binding Quantity}"/>
                 <DataGridTextColumn Header="Kommentar" Binding="{Binding Comment}"/>
             </DataGrid.Columns>
-        </DataGrid>
+        </DataGrid>-->
     </Grid>
 </UserControl>

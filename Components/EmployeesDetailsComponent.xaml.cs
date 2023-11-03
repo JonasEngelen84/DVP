@@ -19,7 +19,7 @@ namespace DVP.Components
 
             this.DataContext = _employeesDetailsComponentViewModel;
 
-            EmployeesDetailsDataGrid.ItemsSource = _employeesDetailsComponentViewModel.AllEmployeeClothesCollection;
+            EmployeesDetailsListView.ItemsSource = _employeesDetailsComponentViewModel.AllEmployeeClothesCollection;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace DVP.Components
 
             this.DataContext = _clothesDetailsComponentViewModel;
 
-            ClothesDetailsDataGrid.ItemsSource = _clothesDetailsComponentViewModel.ClothesCollection;
+            ClothesDetailsListView.ItemsSource = _clothesDetailsComponentViewModel.ClothesCollection;
         }
     }
 }
