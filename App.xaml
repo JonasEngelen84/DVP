@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:DVP.Views">
     <Application.Resources>
-         
+        <!--<ResourceDictionary>
+            <Style x:Key="FullBackground" TargetType="ListView">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF736969" Offset="0"/>
+                            <GradientStop Color="#FFBABABA" Offset="0.809"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>-->
     </Application.Resources>
 </Application>

@@ -18,7 +18,7 @@
         <GridSplitter Grid.Column="1" HorizontalAlignment="Center" Width="24" Margin="0,218,0,0" Cursor="">
             <GridSplitter.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF8C8989" Offset="0.013"/>
+                    <GradientStop Color="#ccc9c2" Offset="0.013"/>
                     <GradientStop Color="#FFBABABA" Offset="0.469"/>
                 </LinearGradientBrush>
             </GridSplitter.Background>
