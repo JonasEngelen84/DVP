@@ -2,8 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DVP.Components"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
@@ -14,17 +13,34 @@
             <ListView x:Name="EmployeesDetailsListView"
                       BorderThickness="0"
                       FontSize="13"
-                      Background="#d1cfcb">
+                      Background="#FFD1CFCB"
+                      Foreground="#FF212129">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Personal Nr." DisplayMemberBinding="{Binding OwnerId}" Width="auto"/>
-                        <GridViewColumn Header="Nachname" DisplayMemberBinding="{Binding OwnerLastname}" Width="auto"/>
-                        <GridViewColumn Header="Vorname" DisplayMemberBinding="{Binding OwnerFirstname}" Width="auto"/>
-                        <GridViewColumn Header="Kleidung" DisplayMemberBinding="{Binding Name}" Width="auto"/>
-                        <GridViewColumn Header="Saison" DisplayMemberBinding="{Binding Season}" Width="auto"/>
-                        <GridViewColumn Header="Größe" DisplayMemberBinding="{Binding Size}" Width="auto"/>
-                        <GridViewColumn Header="Menge" DisplayMemberBinding="{Binding Quantity}" Width="auto"/>
-                        <GridViewColumn Header="Kommentar" DisplayMemberBinding="{Binding Comment}" Width="auto"/>
+                        <GridViewColumn Header="ID."
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding OwnerId}"/>
+                        <GridViewColumn Header="Nachname"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding OwnerLastname}" />
+                        <GridViewColumn Header="Vorname"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding OwnerFirstname}"/>
+                        <GridViewColumn Header="Kleidung"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Saison"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Season}"/>
+                        <GridViewColumn Header="Größe"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Size}"/>
+                        <GridViewColumn Header="Menge"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Quantity}"/>
+                        <GridViewColumn Header="Kommentar"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Comment}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

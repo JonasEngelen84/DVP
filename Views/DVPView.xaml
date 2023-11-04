@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:components="clr-namespace:DVP.Components"
-             mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="1000" Foreground="{x:Null}">
+             mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="1100" Foreground="{x:Null}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" MinWidth="1"/>

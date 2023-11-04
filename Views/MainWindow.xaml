@@ -10,7 +10,7 @@
         Title="DVP"
         Height="800"
         MinHeight="400"
-        Width="1000"
+        Width="1100"
         MinWidth="400"
         WindowStartupLocation="CenterScreen"
         Icon="/DVP Icon.png">

@@ -13,16 +13,31 @@
             <ListView x:Name="ClothesDetailsListView"
                       BorderThickness="0"
                       FontSize="13"
-                      Background="#d1cfcb">
+                      Background="#FFD1CFCB"
+                      Foreground="#FF212129">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Kategorie" DisplayMemberBinding="{Binding Categorie}" Width="auto"/>
-                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="auto"/>
-                        <GridViewColumn Header="Saison" DisplayMemberBinding="{Binding Season}" Width="auto"/>
-                        <GridViewColumn Header="Größe" DisplayMemberBinding="{Binding Size}" Width="auto"/>
-                        <GridViewColumn Header="Menge" DisplayMemberBinding="{Binding Quantity}" Width="auto"/>
-                        <GridViewColumn Header="Preis" DisplayMemberBinding="{Binding Prize}" Width="auto"/>
-                        <GridViewColumn Header="Kommentar" DisplayMemberBinding="{Binding Comment}" Width="auto"/>
+                        <GridViewColumn Header="Kategorie"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Categorie}"/>
+                        <GridViewColumn Header="Name"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Saison"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Season}"/>
+                        <GridViewColumn Header="Größe"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Size}"/>
+                        <GridViewColumn Header="Menge"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Quantity}"/>
+                        <GridViewColumn Header="Preis"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Prize}"/>
+                        <GridViewColumn Header="Kommentar"
+                                        Width="auto"
+                                        DisplayMemberBinding="{Binding Comment}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
