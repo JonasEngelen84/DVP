@@ -7,26 +7,36 @@
              mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="1100" Foreground="{x:Null}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" MinWidth="1"/>
+            <ColumnDefinition Width="*" MinWidth="0"/>
             <ColumnDefinition Width="24"/>
-            <ColumnDefinition Width="*" MinWidth="1"/>
+            <ColumnDefinition Width="*" MinWidth="0"/>
         </Grid.ColumnDefinitions>
 
         <components:EmployeesDetailsComponent DataContext="{Binding EmployeesDetailsComponentViewModel}"/>
         <components:ClothesDetailsComponent Grid.Column="2" DataContext="{Binding ClothesDetailsComponentViewModel}"/>
 
-        <GridSplitter Grid.Column="1" HorizontalAlignment="Center" Width="24" Margin="0,218,0,0" Cursor="">
+        <GridSplitter Grid.Column="1"
+                      HorizontalAlignment="Center"
+                      Width="24"
+                      Margin="0,218,0,0"
+                      Cursor="SizeWE">
             <GridSplitter.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#ccc9c2" Offset="0.013"/>
-                    <GradientStop Color="#FFBABABA" Offset="0.469"/>
+                    <GradientStop Color="#FFB7B7B7" Offset="0"/>
+                    <GradientStop Color="#FFBABABA" Offset="1"/>
                 </LinearGradientBrush>
             </GridSplitter.Background>
         </GridSplitter>
 
-        <Button Width="24" Height="24" Grid.Column="1" Margin="0,163,0,0" 
-                VerticalAlignment="Top" BorderBrush="{x:Null}" Cursor="Hand"
-                x:Name="PlusButton" Command="{Binding EditPlusCommand}">
+        <Button x:Name="PlusButton"
+                Width="24"
+                Height="24"
+                Grid.Column="1"
+                Margin="0,163,0,0" 
+                VerticalAlignment="Top"
+                BorderBrush="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding EditPlusCommand}">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="24"/>
@@ -34,9 +44,15 @@
             </Button.Resources>
         </Button>
 
-        <Button Width="24" Height="24" Grid.Column="1" Margin="0,190,0,0"
-                VerticalAlignment="Top" BorderBrush="{x:Null}" Cursor="Hand"
-                x:Name="MinusButton" Command="{Binding EditMinusCommand}">
+        <Button x:Name="MinusButton"
+                Width="24"
+                Height="24"
+                Grid.Column="1"
+                Margin="0,190,0,0"
+                VerticalAlignment="Top"
+                BorderBrush="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding EditMinusCommand}">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="24"/>
@@ -44,49 +60,90 @@
             </Button.Resources>
         </Button>
 
-        <Button Width="25" Height="24" VerticalAlignment="Top"
-                Grid.Column="1" Cursor="Hand"
-                x:Name="FilterButton" Command="{Binding FilterDataGridCommand}">
+        <Button x:Name="FilterButton"
+                Width="25"
+                Height="24"
+                VerticalAlignment="Top"
+                Grid.Column="1"
+                BorderThickness="0"
+                Background="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding FilterDataGridCommand}">
             <StackPanel>
                 <Image Source="/Filter.png" Height="21" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top"
-                Margin="0,27,0,0" Grid.Column="1" Cursor="Hand"
-                x:Name="EditButton" Command="{Binding EditModelsCommand}">
+        <Button x:Name="EditButton"
+                Width="24"
+                Height="24"
+                VerticalAlignment="Top"
+                Margin="0,27,0,0"
+                Grid.Column="1"
+                BorderThickness="0"
+                Background="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding EditModelsCommand}">
             <StackPanel>
                 <Image Source="/Bearbeiten.png" Height="21" Width="20" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top"
-                Margin="0,54,0,0" Grid.Column="1" Cursor="Hand"
-                x:Name="BackwardButton" Command="{Binding BackwardCommand}">
+        <Button x:Name="BackwardButton"
+                Width="24"
+                Height="24"
+                VerticalAlignment="Top"
+                Margin="0,54,0,0"
+                Grid.Column="1"
+                BorderThickness="0"
+                Background="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding BackwardCommand}">
             <StackPanel>
                 <Image Source="/Rückgängig.png" Height="21" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top"
-                Margin="0,81,0,0" Grid.Column="1" Cursor="Hand"
-                x:Name="SafeButton" Command="{Binding SafeCommand}">
+        <Button x:Name="SafeButton"
+                Width="24"
+                Height="24"
+                VerticalAlignment="Top"
+                Margin="0,81,0,0"
+                Grid.Column="1"
+                BorderThickness="0"
+                Background="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding SafeCommand}">
             <StackPanel>
                 <Image Source="/Speichern.png" Height="21" Width="20" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top"
-                Margin="0,108,0,0" Grid.Column="1" Cursor="Hand"
-                x:Name="PrintButton" Command="{Binding PrintCommand}">
+        <Button x:Name="PrintButton"
+                Width="24"
+                Height="24"
+                VerticalAlignment="Top"
+                Margin="0,108,0,0"
+                Grid.Column="1"
+                BorderThickness="0"
+                Background="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding PrintCommand}">
             <StackPanel>
                 <Image Source="/Drucken.png" Height="21" Width="20" />
             </StackPanel>
         </Button>
 
-        <Button Width="24" Height="24" VerticalAlignment="Top"
-                Margin="0,135,0,0" Grid.Column="1" Cursor="Hand"
-                x:Name="ContactButton" Command="{Binding ContactCommand}">
+        <Button x:Name="ContactButton"
+                Width="24"
+                Height="24"
+                VerticalAlignment="Top"
+                Margin="0,135,0,0"
+                Grid.Column="1"
+                BorderThickness="0"
+                Background="{x:Null}"
+                Cursor="Hand"
+                Command="{Binding ContactCommand}">
             <StackPanel>
                 <Image Source="/Kontakt.png" Height="21" Width="20" />
             </StackPanel>

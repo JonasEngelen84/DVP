@@ -6,18 +6,15 @@
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        <Border BorderBrush="Black"
-                BorderThickness="1"
-                CornerRadius="10"
-                SnapsToDevicePixels="True">
+        <Border >
             <ListView x:Name="EmployeesDetailsListView"
                       BorderThickness="0"
                       FontSize="13"
-                      Background="#FFD1CFCB"
+                      Background="{x:Null}"
                       Foreground="#FF212129">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="ID."
+                        <GridViewColumn Header="ID"
                                         Width="auto"
                                         DisplayMemberBinding="{Binding OwnerId}"/>
                         <GridViewColumn Header="Nachname"

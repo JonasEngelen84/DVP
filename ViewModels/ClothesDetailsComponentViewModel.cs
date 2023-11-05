@@ -7,7 +7,7 @@ namespace DVP.ViewModels
 {
     public class ClothesDetailsComponentViewModel : ViewModelBase
     {
-        private ObservableCollection<Clothes> _clothesCollection;
+        private readonly ObservableCollection<Clothes> _clothesCollection;
 
         // Zur encapsulation von _clothesCollection wird ein IEnumerable als pointer verwendet.
         public IEnumerable<Clothes> ClothesCollection => _clothesCollection;

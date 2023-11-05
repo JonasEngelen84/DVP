@@ -12,7 +12,7 @@ namespace DVP.ViewModels
 {
     public class EmployeesDetailsComponentViewModel : ViewModelBase
     {
-        private ObservableCollection<Clothes> _allEmployeeClothesCollection;
+        private readonly ObservableCollection<Clothes> _allEmployeeClothesCollection;
 
         // Zur encapsulation von _allEmployeeClothesCollection wird ein IEnumerable als pointer verwendet.
         public IEnumerable<Clothes> AllEmployeeClothesCollection => _allEmployeeClothesCollection;
