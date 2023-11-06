@@ -20,7 +20,7 @@ namespace DVP
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new DVPViewViewModel(_selectedClothesStore)
+                DataContext = new DVPViewModel(_selectedClothesStore)
             };
 
             MainWindow.Show();

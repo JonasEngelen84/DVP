@@ -1,23 +1,18 @@
 ﻿using DVP.Models;
 using DVP.Stores;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows;
 
 namespace DVP.ViewModels
 {
-    public class EmployeesDetailsComponentViewModel : ViewModelBase
+    public class EmployeesListViewViewModel : ViewModelBase
     {
         private readonly ObservableCollection<Clothes> _allEmployeeClothesCollection;
 
         // Zur encapsulation von _allEmployeeClothesCollection wird ein IEnumerable als pointer verwendet.
         public IEnumerable<Clothes> AllEmployeeClothesCollection => _allEmployeeClothesCollection;
 
-        public EmployeesDetailsComponentViewModel(SelectedClothesStore _selectedClothesStore)
+        public EmployeesListViewViewModel(SelectedClothesStore _selectedClothesStore)
         {
             _allEmployeeClothesCollection = new ObservableCollection<Clothes>
             {

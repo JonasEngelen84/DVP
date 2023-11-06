@@ -12,8 +12,8 @@
             <ColumnDefinition Width="*" MinWidth="0"/>
         </Grid.ColumnDefinitions>
 
-        <components:EmployeesDetailsComponent DataContext="{Binding EmployeesDetailsComponentViewModel}"/>
-        <components:ClothesDetailsComponent Grid.Column="2" DataContext="{Binding ClothesDetailsComponentViewModel}"/>
+        <components:EmployeesDetailsComponent DataContext="{Binding EmployeesListViewViewModel}"/>
+        <components:ClothesDetailsComponent Grid.Column="2" DataContext="{Binding ClothesListViewViewModel}"/>
 
         <GridSplitter Grid.Column="1"
                       HorizontalAlignment="Center"

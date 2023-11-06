@@ -3,10 +3,10 @@ using System.Windows.Input;
 
 namespace DVP.ViewModels
 {
-    public class DVPViewViewModel
+    public class DVPViewModel
     {
-        public EmployeesDetailsComponentViewModel EmployeesDetailsViewModel { get; }
-        public ClothesDetailsComponentViewModel ClothesDetailsViewModel { get; }
+        public EmployeesListViewViewModel EmployeesDetailsViewModel { get; }
+        public ClothesListViewViewModel ClothesDetailsViewModel { get; }
 
         public ICommand FilterDataGridCommand { get; }
         public ICommand EditModelsCommand { get; }
@@ -17,10 +17,10 @@ namespace DVP.ViewModels
         public ICommand EditPlusCommand { get; }
         public ICommand EditMinusCommand { get; }
 
-        public DVPViewViewModel(SelectedClothesStore _selectedClothesStore)
+        public DVPViewModel(SelectedClothesStore _selectedClothesStore)
         {
-            ClothesDetailsViewModel = new ClothesDetailsComponentViewModel(_selectedClothesStore);
-            EmployeesDetailsViewModel = new EmployeesDetailsComponentViewModel(_selectedClothesStore);
+            ClothesDetailsViewModel = new ClothesListViewViewModel(_selectedClothesStore);
+            EmployeesDetailsViewModel = new EmployeesListViewViewModel(_selectedClothesStore);
         }
     }
 }

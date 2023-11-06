@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 
 namespace DVP.ViewModels
 {
-    public class ClothesDetailsComponentViewModel : ViewModelBase
+    public class ClothesListViewViewModel : ViewModelBase
     {
         private readonly ObservableCollection<Clothes> _clothesCollection;
 
@@ -13,7 +13,7 @@ namespace DVP.ViewModels
         public IEnumerable<Clothes> ClothesCollection => _clothesCollection;
 
 
-        public ClothesDetailsComponentViewModel(SelectedClothesStore _selectedClothesStore)
+        public ClothesListViewViewModel(SelectedClothesStore _selectedClothesStore)
         {
             _clothesCollection = new ObservableCollection<Clothes>
             {

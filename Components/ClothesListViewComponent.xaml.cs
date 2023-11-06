@@ -9,17 +9,17 @@ namespace DVP.Components
     /// </summary>
     public partial class ClothesDetailsComponent : UserControl
     {
-        private readonly ClothesDetailsComponentViewModel _clothesDetailsComponentViewModel;
+        private readonly ClothesListViewViewModel _clothesListViewViewModel;
 
         public ClothesDetailsComponent()
         {
             InitializeComponent();
 
-            _clothesDetailsComponentViewModel = new ClothesDetailsComponentViewModel(new SelectedClothesStore());
+            _clothesListViewViewModel = new ClothesListViewViewModel(new SelectedClothesStore());
 
-            this.DataContext = _clothesDetailsComponentViewModel;
+            //this.DataContext = _clothesListViewViewModel;
 
-            ClothesDetailsListView.ItemsSource = _clothesDetailsComponentViewModel.ClothesCollection;
+            ClothesListView.ItemsSource = _clothesListViewViewModel.ClothesCollection;
         }
     }
 }

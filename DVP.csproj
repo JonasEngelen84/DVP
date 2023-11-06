@@ -55,25 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Components\ClothesDetailsComponent.xaml.cs">
-      <DependentUpon>ClothesDetailsComponent.xaml</DependentUpon>
+    <Compile Include="Components\ClothesListViewComponent.xaml.cs">
+      <DependentUpon>ClothesListViewComponent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Components\EmployeesDetailsComponent.xaml.cs">
-      <DependentUpon>EmployeesDetailsComponent.xaml</DependentUpon>
+    <Compile Include="Components\EmployeesListViewComponent.xaml.cs">
+      <DependentUpon>EmployeesListViewComponent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Stores\SelectedClothesStore.cs" />
-    <Compile Include="ViewModels\ClothesDetailsComponentViewModel.cs" />
-    <Compile Include="ViewModels\DVPViewViewModel.cs" />
-    <Compile Include="ViewModels\EmployeesDetailsComponentViewModel.cs" />
+    <Compile Include="ViewModels\ClothesListViewViewModel.cs" />
+    <Compile Include="ViewModels\DVPViewModel.cs" />
+    <Compile Include="ViewModels\EmployeesListViewViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\DVPView.xaml.cs">
       <DependentUpon>DVPView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Components\ClothesDetailsComponent.xaml">
+    <Page Include="Components\ClothesListViewComponent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Components\EmployeesDetailsComponent.xaml">
+    <Page Include="Components\EmployeesListViewComponent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
