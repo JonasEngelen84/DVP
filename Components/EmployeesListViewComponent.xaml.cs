@@ -5,21 +5,15 @@ using System.Windows.Controls;
 namespace DVP.Components
 {
     /// <summary>
-    /// Interaktionslogik für EmployeesDetailsComponent.xaml
+    /// Interaktionslogik für EmployeesListViewComponent.xaml
     /// </summary>
-    public partial class EmployeesDetailsComponent : UserControl
+    public partial class EmployeesListViewComponent : UserControl
     {
-        private readonly EmployeesListViewViewModel _employeesListViewViewModel;
-
-        public EmployeesDetailsComponent()
+        public EmployeesListViewComponent()
         {
             InitializeComponent();
 
-            _employeesListViewViewModel = new EmployeesListViewViewModel(new SelectedClothesStore());
-
-            //this.DataContext = _employeesListViewViewModel;
-
-            EmployeesListView.ItemsSource = _employeesListViewViewModel.AllEmployeeClothesCollection;
+            this.DataContext = new EmployeesListViewViewModel(new SelectedClothesStore());
         }
     }
 }

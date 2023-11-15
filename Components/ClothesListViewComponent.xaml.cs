@@ -5,21 +5,15 @@ using System.Windows.Controls;
 namespace DVP.Components
 {
     /// <summary>
-    /// Interaktionslogik für ClothesDetailsComponent.xaml
+    /// Interaktionslogik für ClothesListViewComponent.xaml
     /// </summary>
-    public partial class ClothesDetailsComponent : UserControl
+    public partial class ClothesListViewComponent : UserControl
     {
-        private readonly ClothesListViewViewModel _clothesListViewViewModel;
-
-        public ClothesDetailsComponent()
+        public ClothesListViewComponent()
         {
             InitializeComponent();
 
-            _clothesListViewViewModel = new ClothesListViewViewModel(new SelectedClothesStore());
-
-            //this.DataContext = _clothesListViewViewModel;
-
-            ClothesListView.ItemsSource = _clothesListViewViewModel.ClothesCollection;
+            this.DataContext = new ClothesListViewViewModel(new SelectedClothesStore());
         }
     }
 }
