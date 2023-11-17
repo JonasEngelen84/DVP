@@ -6,6 +6,8 @@ namespace DVP.Components
 {
     /// <summary>
     /// Interaktionslogik für EmployeesListViewComponent.xaml
+    /// Wird wie alle anderen Views durch DataContext übergangen
+    /// auf die selbst angelegte Klasse "EmployeesListViewViewModel".
     /// </summary>
     public partial class EmployeesListViewComponent : UserControl
     {
@@ -13,7 +15,7 @@ namespace DVP.Components
         {
             InitializeComponent();
 
-            this.DataContext = new EmployeesListViewViewModel(new SelectedClothesStore());
+            DataContext = new EmployeesListViewViewModel(new SelectedClothesStore());
         }
     }
 }

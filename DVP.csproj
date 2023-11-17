@@ -55,12 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\FilterListViewCommand.cs" />
     <Compile Include="Components\ClothesListViewComponent.xaml.cs">
       <DependentUpon>ClothesListViewComponent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\EmployeesListViewComponent.xaml.cs">
       <DependentUpon>EmployeesListViewComponent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\EmployeesClothesListViewHeaderSortService.cs" />
     <Compile Include="Stores\SelectedClothesStore.cs" />
     <Compile Include="ViewModels\ClothesListViewViewModel.cs" />
     <Compile Include="ViewModels\DVPViewModel.cs" />
@@ -68,6 +71,9 @@
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\DVPView.xaml.cs">
       <DependentUpon>DVPView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditButtonView.xaml.cs">
+      <DependentUpon>EditButtonView.xaml</DependentUpon>
     </Compile>
     <Page Include="Components\ClothesListViewComponent.xaml">
       <SubType>Designer</SubType>
@@ -93,9 +99,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EditButtonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Clothes.cs" />
+    <Compile Include="Models\ClothesModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -143,7 +153,6 @@
     <Resource Include="Kontakt.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

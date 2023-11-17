@@ -1,17 +1,13 @@
 ﻿using DVP.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVP.Stores
 {
     public class SelectedClothesStore
     {
-        private Clothes _selectedClothes;
+        private ClothesModel _selectedClothes;
 
-        public Clothes SelectedClothes
+        public ClothesModel SelectedClothes
         {
             get
             {

@@ -1,7 +1,12 @@
-﻿<Application x:Class="DVP.App"
+﻿<!--Main-Xaml:
+    Wird beim Start aufgerufen.
+    Wird unter anderem für selbst erstellte Ressourcen/Dictionaries genutzt.-->
+<Application x:Class="DVP.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:DVP.Views">
+    
+    
     <Application.Resources>
         <!--<ResourceDictionary>
             <Style x:Key="FullBackground" TargetType="ListView">
@@ -16,4 +21,5 @@
             </Style>
         </ResourceDictionary>-->
     </Application.Resources>
+    
 </Application>

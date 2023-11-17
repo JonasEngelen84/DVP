@@ -5,7 +5,9 @@ using System.Windows.Controls;
 namespace DVP.Components
 {
     /// <summary>
-    /// Interaktionslogik für ClothesListViewComponent.xaml
+    /// Interaktionslogik für ClothesListViewComponent.xaml.
+    /// Wird wie alle anderen Views durch DataContext übergangen
+    /// auf die selbst angelegte Klasse "ClothesListViewViewModel".
     /// </summary>
     public partial class ClothesListViewComponent : UserControl
     {
@@ -13,7 +15,7 @@ namespace DVP.Components
         {
             InitializeComponent();
 
-            this.DataContext = new ClothesListViewViewModel(new SelectedClothesStore());
+            DataContext = new ClothesListViewViewModel(new SelectedClothesStore());
         }
     }
 }

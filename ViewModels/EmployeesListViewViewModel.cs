@@ -5,129 +5,89 @@ using System.Collections.ObjectModel;
 
 namespace DVP.ViewModels
 {
+    /// <summary>
+    /// Interaktionslogik für EmployeesListViewComponent.xaml:
+    /// </summary>
     public class EmployeesListViewViewModel : ViewModelBase
     {
-        private readonly ObservableCollection<Clothes> _allEmployeeClothesCollection;
+        // Bereitstellung einer ObservableCollection der Mitarbeiter-Kleidung "_allEmployeeClothesCollection".
+        private readonly ObservableCollection<ClothesModel> _allEmployeeClothesCollection;
 
-        // Zur encapsulation von _allEmployeeClothesCollection wird ein IEnumerable als pointer verwendet.
-        public IEnumerable<Clothes> AllEmployeeClothesCollection => _allEmployeeClothesCollection;
+        // Zur encapsulation (private) von "_allEmployeeClothesCollection" wird ein IEnumerable als pointer verwendet.
+        public IEnumerable<ClothesModel> AllEmployeeClothesCollection => _allEmployeeClothesCollection;
 
         public EmployeesListViewViewModel(SelectedClothesStore _selectedClothesStore)
         {
-            _allEmployeeClothesCollection = new ObservableCollection<Clothes>
-            {
-                new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 4, 666, "Jonas", "Engelen"),
-                new Clothes("Shirt", "Wintershirt", "M", "Winter", 2, 666, "Jonas", "Engelen"),
-                new Clothes("Hose", "Sommerhose", "54", "Sommer", 3, 666, "Jonas", "Engelen"),
-                new Clothes("Hose", "Winterhose", "54", "Winter", 2, 666, "Jonas", "Engelen"),
-                new Clothes("Jacke", "Regenjacke", "L", "", 1, 666, "Jonas", "Engelen"),
-                new Clothes("Jacke", "Fleecejacke", "S", "", 1, 666, "Jonas", "Engelen"),
-                new Clothes("Jacke", "Winterjacke", "XL", "Winter", 1, 666, "Jonas", "Engelen"),
-                new Clothes("Kopfbedeckung", "Sommerkappe", "", "Sommer", 1, 666, "Jonas", "Engelen"),
-                new Clothes("Kopfbedeckung", "Winterkappe", "", "Winter", 1, 666, "Jonas", "Engelen"),
+            _allEmployeeClothesCollection = new ObservableCollection<ClothesModel>();
 
-                new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 2, 123, "Markus", "Oettken"),
-                new Clothes("Hose", "Sommerhose", "56", "Sommer", 2, 123, "Markus", "Oettken"),
-                new Clothes("Hose", "Winterhose", "56", "Winter", 2, 123, "Markus", "Oettken"),
-                new Clothes("Jacke", "Regenjacke", "L", "", 1, 123, "Markus", "Oettken"),
-                new Clothes("Jacke", "Winterjacke", "XL", "Winter", 1, 123, "Markus", "Oettken"),
-
-                new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 1, 456, "Nadine", "Molik"),
-                new Clothes("Shirt", "Wintershirt", "M", "Winter", 1, 456, "Nadine", "Molik"),
-                new Clothes("Hose", "Sommerhose", "48", "Sommer", 1, 456, "Nadine", "Molik"),
-                new Clothes("Hose", "Winterhose", "48", "Winter", 1, 456, "Nadine", "Molik"),
-                new Clothes("Jacke", "Regenjacke", "L", "", 1, 456, "Nadine", "Molik"),
-                new Clothes("Jacke", "Fleecejacke", "S", "", 1, 456, "Nadine", "Molik"),
-                new Clothes("Jacke", "Winterjacke", "XL", "Winter", 1, 456, "Nadine", "Molik"),
-                new Clothes("Kopfbedeckung", "Sommerkappe", "", "Sommer", 1, 456, "Nadine", "Molik"),
-                new Clothes("Kopfbedeckung", "Winterkappe", "", "Winter", 1, 456, "Nadine", "Molik"),
-
-                new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 2, 789, "Daniel", "Nickol"),
-                new Clothes("Shirt", "Wintershirt", "M", "Winter", 2, 789, "Daniel", "Nickol"),
-                new Clothes("Hose", "Sommerhose", "56", "Sommer", 2, 789, "Daniel", "Nickol"),
-                new Clothes("Hose", "Winterhose", "56", "Winter", 2, 789, "Daniel", "Nickol"),
-                new Clothes("Jacke", "Regenjacke", "L", "", 2, 789, "Daniel", "Nickol"),
-                new Clothes("Jacke", "Winterjacke", "XL", "Winter", 2, 789, "Daniel", "Nickol"),
-                new Clothes("Kopfbedeckung", "Sommerkappe", "", "Sommer", 2, 789, "Daniel", "Nickol"),
-
-                new Clothes("Shirt", "Sommershirt", "XL", "Sommer", 4, 753, "Irfan", "Yüksel"),
-                new Clothes("Shirt", "Wintershirt", "M", "Winter", 4, 753, "Irfan", "Yüksel"),
-                new Clothes("Hose", "Sommerhose", "48", "Sommer", 3, 753, "Irfan", "Yüksel"),
-                new Clothes("Hose", "Winterhose", "48", "Winter", 3, 753, "Irfan", "Yüksel"),
-                new Clothes("Jacke", "Regenjacke", "L", "", 1, 753, "Irfan", "Yüksel"),
-                new Clothes("Jacke", "Fleecejacke", "S", "", 1, 753, "Irfan", "Yüksel"),
-                new Clothes("Jacke", "Winterjacke", "XL", "Winter", 1, 753, "Irfan", "Yüksel"),
-                new Clothes("Kopfbedeckung", "Sommerkappe", "", "Sommer", 1, 753, "Irfan", "Yüksel"),
-                new Clothes("Kopfbedeckung", "Winterkappe", "", "Winter", 1, 753, "Irfan", "Yüksel"),
-            };
+            HardCodedObjects();
         }
 
-        //GridViewColumnHeader _lastHeaderClicked = null;
-        //ListSortDirection _lastDirection = ListSortDirection.Ascending;
 
-        //void GridViewColumnHeaderClickedHandler(object sender,
-        //                                        RoutedEventArgs e)
-        //{
-        //    var headerClicked = e.OriginalSource as GridViewColumnHeader;
-        //    ListSortDirection direction;
 
-        //    if (headerClicked != null)
-        //    {
-        //        if (headerClicked.Role != GridViewColumnHeaderRole.Padding)
-        //        {
-        //            if (headerClicked != _lastHeaderClicked)
-        //            {
-        //                direction = ListSortDirection.Ascending;
-        //            }
-        //            else
-        //            {
-        //                if (_lastDirection == ListSortDirection.Ascending)
-        //                {
-        //                    direction = ListSortDirection.Descending;
-        //                }
-        //                else
-        //                {
-        //                    direction = ListSortDirection.Ascending;
-        //                }
-        //            }
 
-        //            var columnBinding = headerClicked.Column.DisplayMemberBinding as Binding;
-        //            var sortBy = columnBinding?.Path.Path ?? headerClicked.Column.Header as string;
 
-        //            Sort(sortBy, direction);
 
-        //            if (direction == ListSortDirection.Ascending)
-        //            {
-        //                headerClicked.Column.HeaderTemplate =
-        //                  Resources["HeaderTemplateArrowUp"] as DataTemplate;
-        //            }
-        //            else
-        //            {
-        //                headerClicked.Column.HeaderTemplate =
-        //                  Resources["HeaderTemplateArrowDown"] as DataTemplate;
-        //            }
 
-        //            // Remove arrow from previously sorted header
-        //            if (_lastHeaderClicked != null && _lastHeaderClicked != headerClicked)
-        //            {
-        //                _lastHeaderClicked.Column.HeaderTemplate = null;
-        //            }
 
-        //            _lastHeaderClicked = headerClicked;
-        //            _lastDirection = direction;
-        //        }
-        //    }
-        //}
 
-        //private void Sort(string sortBy, ListSortDirection direction)
-        //{
-        //    ICollectionView dataView =
-        //      CollectionViewSource.GetDefaultView(EmployeesDetailsListView.ItemsSource);
 
-        //    dataView.SortDescriptions.Clear();
-        //    SortDescription sd = new SortDescription(sortBy, direction);
-        //    dataView.SortDescriptions.Add(sd);
-        //    dataView.Refresh();
-        //}
+
+
+
+
+
+
+
+
+
+
+
+        private void HardCodedObjects()
+        {
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Sommershirt", "XL", "Sommer", 4, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Wintershirt", "M", "Winter", 2, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Sommerhose", "54", "Sommer", 3, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Winterhose", "54", "Winter", 2, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Regenjacke", "L", "", 1, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Fleecejacke", "S", "", 1, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Winterjacke", "XL", "Winter", 1, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Kopfbedeckung", "Sommerkappe", "", "Sommer", 1, 666, "Jonas", "Engelen"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Kopfbedeckung", "Winterkappe", "", "Winter", 1, 666, "Jonas", "Engelen"));
+
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Sommershirt", "XL", "Sommer", 2, 123, "Markus", "Oettken"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Sommerhose", "56", "Sommer", 2, 123, "Markus", "Oettken"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Winterhose", "56", "Winter", 2, 123, "Markus", "Oettken"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Regenjacke", "L", "", 1, 123, "Markus", "Oettken"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Winterjacke", "XL", "Winter", 1, 123, "Markus", "Oettken"));
+
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Sommershirt", "XL", "Sommer", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Wintershirt", "M", "Winter", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Sommerhose", "48", "Sommer", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Winterhose", "48", "Winter", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Regenjacke", "L", "", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Fleecejacke", "S", "", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Winterjacke", "XL", "Winter", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Kopfbedeckung", "Sommerkappe", "", "Sommer", 1, 456, "Nadine", "Molik"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Kopfbedeckung", "Winterkappe", "", "Winter", 1, 456, "Nadine", "Molik"));
+
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Sommershirt", "XL", "Sommer", 2, 789, "Daniel", "Nickol"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Wintershirt", "M", "Winter", 2, 789, "Daniel", "Nickol"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Sommerhose", "56", "Sommer", 2, 789, "Daniel", "Nickol"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Winterhose", "56", "Winter", 2, 789, "Daniel", "Nickol"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Regenjacke", "L", "", 2, 789, "Daniel", "Nickol"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Winterjacke", "XL", "Winter", 2, 789, "Daniel", "Nickol"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Kopfbedeckung", "Sommerkappe", "", "Sommer", 2, 789, "Daniel", "Nickol"));
+
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Sommershirt", "XL", "Sommer", 4, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Shirt", "Wintershirt", "M", "Winter", 4, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Sommerhose", "48", "Sommer", 3, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Hose", "Winterhose", "48", "Winter", 3, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Regenjacke", "L", "", 1, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Fleecejacke", "S", "", 1, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Jacke", "Winterjacke", "XL", "Winter", 1, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Kopfbedeckung", "Sommerkappe", "", "Sommer", 1, 753, "Irfan", "Yüksel"));
+            _allEmployeeClothesCollection.Add(new ClothesModel("Kopfbedeckung", "Winterkappe", "", "Winter", 1, 753, "Irfan", "Yüksel"));
+        }
     }
 }

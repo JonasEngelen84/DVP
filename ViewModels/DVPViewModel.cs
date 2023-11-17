@@ -1,14 +1,18 @@
-﻿using DVP.Stores;
+﻿using DVP.Commands;
+using DVP.Stores;
 using System.Windows.Input;
 
 namespace DVP.ViewModels
 {
-    public class DVPViewModel
+    /// <summary>
+    /// Interaktionslogik für DVPView.xaml:
+    /// </summary>
+    public class DVPViewModel : ViewModelBase
     {
         public EmployeesListViewViewModel EmployeesDetailsViewModel { get; }
         public ClothesListViewViewModel ClothesDetailsViewModel { get; }
 
-        public ICommand FilterDataGridCommand { get; }
+        public ICommand FilterListViewCommand { get; }
         public ICommand EditModelsCommand { get; }
         public ICommand BackwardCommand { get; }
         public ICommand SafeCommand { get; }
@@ -21,6 +25,7 @@ namespace DVP.ViewModels
         {
             ClothesDetailsViewModel = new ClothesListViewViewModel(_selectedClothesStore);
             EmployeesDetailsViewModel = new EmployeesListViewViewModel(_selectedClothesStore);
+            FilterListViewCommand = new FilterListViewCommand(this);
         }
     }
 }

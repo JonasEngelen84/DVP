@@ -2,7 +2,7 @@
 
 namespace DVP.Models
 {
-    public class Clothes
+    public class ClothesModel
     {
         public string Categorie { get; set; }
         public string Name { get; set; }
@@ -15,7 +15,7 @@ namespace DVP.Models
         public string OwnerFirstname { get; }
         public string OwnerLastname { get; }
 
-        public Clothes(string categorie, string name, string size, string season, int quantity, double prize)
+        public ClothesModel(string categorie, string name, string size, string season, int quantity, double prize)
         {
             Categorie = categorie;
             Name = name;
@@ -25,7 +25,7 @@ namespace DVP.Models
             Prize = prize;
         }
 
-        public Clothes(string categorie, string name, string size, string season, int quantity, int ownerId, string ownerFirstname, string ownerLastname)
+        public ClothesModel(string categorie, string name, string size, string season, int quantity, int ownerId, string ownerFirstname, string ownerLastname)
         {
             Categorie = categorie;
             Name = name;
