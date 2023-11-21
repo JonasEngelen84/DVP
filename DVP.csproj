@@ -67,6 +67,7 @@
     <Compile Include="Stores\SelectedClothesStore.cs" />
     <Compile Include="ViewModels\ClothesListViewViewModel.cs" />
     <Compile Include="ViewModels\DVPViewModel.cs" />
+    <Compile Include="ViewModels\EmployeesListViewItemViewModel.cs" />
     <Compile Include="ViewModels\EmployeesListViewViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\DVPView.xaml.cs">
